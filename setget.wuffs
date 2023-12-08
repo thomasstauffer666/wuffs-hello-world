@@ -1,0 +1,19 @@
+pub struct setget?(
+        value : base.u8,
+)
+
+pub func setget.set?(value: base.u8) {
+    this.value = args.value
+}
+
+pub func setget.set_plus?(value: base.u8) {
+    if args.value < 255 {
+        this.value = args.value + 1
+    } else {
+        this.value = args.value
+    }
+}
+
+pub func setget.get() base.u8 {
+    return this.value
+}
